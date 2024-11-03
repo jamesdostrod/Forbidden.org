@@ -1,0 +1,52 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(210, 210, 255);
+    /* view width - view height*/   
+}
+
+/* div{
+    background-color: rgb(141, 141, 255);
+} */
+
+.div1{
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(72, 72, 138);
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* گپ فاصله بین ستون به ستون یا ردیف به ردیف */
+    margin-top: 25px;
+    background-color: rgb(43, 0, 255);
+    padding-right: 15px;
+    font-size: 30px;
+}
+
+.div2{
+    padding: 15px;
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    gap: 3px;
+    background-color: aqua;
+    margin-top: 20px;
+}
+
+#secondP{
+    color: rgb(72, 0, 255);
+}
+/* سلکتور ها یعنی یک تگی را سلکت میکنی و بهش استایل میدی */
+
+a:link{
+    color: #ffffff;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* برای حذف  underline */
+}
+a:visited{
+    color: #7b7b7b;
+}
