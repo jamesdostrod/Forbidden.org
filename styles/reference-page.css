@@ -1,0 +1,25 @@
+blockquote:hover{
+    cursor: pointer;
+}
+
+ blockquote::after{
+    content: attr(cite);
+    /* attr atribute */
+    /* ::after بعد اون المنت یه چیزی را قرار میده */
+    /* بعد افتر باید حتکا کانتنتی داشته باشی */
+    display: none;
+    /* نان یعنی نشون بده */
+    /* برای اینکه موقع هاور اسم سایت رو بیاره.، باید نان رو بزنی بعد پایین دیسپلی رو فلکس کنی */
+    background-color:yellow ;
+    width: fit-content;
+    /* عرض با محتوایی که هست فیت بشه */
+    padding-inline: 10px;
+    border-radius: 5px;
+}
+blockquote{
+    /* background-color: rgb(162, 162, 255); */
+}
+blockquote:hover::after{
+    display: flex;
+    /* فلکس یعنی نشون بده */
+}

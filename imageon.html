@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image on</title>
+    <style>
+        .div1{
+            width: 1000px;
+            height: 500px;
+            display: flex;
+            /* فلکس یعنی دیو را به صورت باکس بشناسه */
+            flex-direction: row;
+            gap: 5px;
+            justify-content: space-between;
+            /* یعنی کانتنت من کجای دیو قرار بگیره */
+            align-items: center;
+            /* یعنی آیتم ها از بالا و پایین وسط دیو قراربگیره */
+            background-color: rgb(201, 201, 201);
+        }
+        .containers{
+            background-color: rgb(122, 122, 122);
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .back-image{
+            background-image: url(images/b&w-large.jpeg);
+            width: 400px;
+            height: 400px;
+            background-size: contain;
+            /* auto: سایز اصلی عکس رو نشون میده / حتی اگر عکس درست نشون نده / حالت دیفالت
+            cover:مهم نیست عکس کات یا کشیده بشه مهم اینه که او اون سایزی که پرنتش داره جا بشه
+            contain: سایز عکس را عوض میکنه و مطمئن میشه که کل عکس دیده بشه */
+        }
+        .image{
+            width: 80%;
+            height: 80%;
+            object-fit: scale-down;
+            /* fill:  عکس را به محتوای باکس فیت میکنه - حالت پیش فرض */
+            /* contain: keep aspect ratio / حتی تو این حالت عکس بهم بخوره / نسبت عرض به ارتفاع عکس را حفظ میکنه */
+            /* cover: حتی اگه عکس کات بشه باز باید فیت بشه */
+            /* none: ریسایز انجام نده */
+            /* scale down: سایز عکس را کوچکتر میکنه */
+            /* برای هر عکسی متفاوته که کدوم بهتر دیده بشه */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="containers">
+            <h1>background image</h1>
+            <div class="back-image"></div>
+        </div>
+        <div class="containers">
+            <h1>image inside div</h1>
+            <img src="images/b&w-large.jpeg" alt="B&W" class="image">
+        </div>
+    </div>
+</body>
+</html>

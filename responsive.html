@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        body{
+            height: 200vh;
+            width: 80vw;
+            background-color: red;
+        }
+        .pic1{
+            object-fit: scale-down;
+        }
+        .pic2{
+            object-fit: scale-down;
+        }
+        h1{
+            position: fixed;
+            /* موقع اسکرول نغییر نمیکنه و همونجا فیکسه */
+        }
+        h2{
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>responsive pics</h1>
+    <h2>chat with us</h2>
+    <!-- میتوانیم با تغییر سایز اسکرین عکس ها رو هم تغییر بدیم -->
+    <picture>
+        <source class="pic1" media="(min-width:650px)" srcset="images/b&w-large.jpeg">
+        <!-- media query: -->
+        <source class="pic2" media="(min-width:465px)" srcset="images/FearStreetLogo.png">
+        <img src="" alt="" width="100%" height="200%">
+        <!-- required: یعنی نباشد اجرا نمیشود -->
+    </picture>
+
+    <p>reset browser page</p>
+</body>
+</html>

@@ -50,3 +50,17 @@ a:link{
 a:visited{
     color: #7b7b7b;
 }
+a:hover{
+    color: red;
+}
+a:active{
+    color: blueviolet;
+    /* یعنی لحظه ای که کلیک میکنی */
+    text-decoration: line-through;
+}
+
+.mypre:hover{
+    cursor: pointer;
+    /* برای مثال تگ پری که بعد اضافه کردن کلاس مای پری و با اینجا آوردن پوینتر روش تعریف کردم */
+    color: blue;
+}
