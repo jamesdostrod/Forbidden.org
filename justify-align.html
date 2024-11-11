@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-align</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+            background-color: tomato;
+        }
+        .row-div{
+            display: flex;
+            flex-direction: row;
+            width: 30rem;
+            height: 30rem;
+            background-color: palegoldenrod;
+            justify-content: center;
+            /* اینجا از ردیف وسط قرار میگیره */
+            align-items: center;
+            /* برای اینکه هردو وسط وسط قرار بگیرن هم الاین و هم جاستیفای سنتر بزن */
+            /* basline: اول متن قرار بگیره
+            space-around:~
+            space-evenly:~
+            end: آخر متن */
+
+
+            /* padding-inline: padding left & padding right */
+            /* space-between: از کنار ها وسط میندازه */
+            gap: 10%;
+        }
+        .col-div{
+            display: flex;
+            flex-direction: column;
+            width: 30rem;
+            height: 30rem;
+            background-color: palegoldenrod;
+            margin-left: 2%;
+            justify-content: center;
+            /* اینجا هم از سمت بالا وسط قرار میگیره */
+            align-items: center;
+            /* اینم برعکس تگ جاستیفای رو انجام میده / طریقه وسط قرار گرفتنش برعکسه */
+            gap: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="row-div">
+        <h1>row-div</h1>
+        <h1>row-div</h1>
+    </div>
+    <div class="col-div">
+        <h1>col-div</h1>
+        <h1>col-div</h1>
+    </div>
+</body>
+</html>

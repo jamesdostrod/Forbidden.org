@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clap back</title>
+    <style>
+        /* :برای ریسپانسیو شدن سایت از */
+        /* vh - vw or % */
+        body{
+            display: flex;
+            width: 100vw;
+            height: 200vh;
+            background-color: rgb(0, 0, 0);
+            justify-content: center;
+            overflow-x: hidden;
+            /* اگه نخوام پروژه به صورت افقی اسکرول بخوره */
+            /* overflow-y: hidden; */
+            /* الان با عمودی هم کامل قفل شد */
+        }
+        header{
+            width: 1300px;
+            height: 400px;
+            background-color: rgba(168, 255, 37, 0.3);
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - 5rem),
+                0% 100%
+            );
+        }
+    </style>
+</head>
+<body>
+    <header>
+        h
+    </header>
+</body>
+</html>

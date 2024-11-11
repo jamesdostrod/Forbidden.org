@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .box{
+            position: absolute;
+            /* یعنی موقعیت نسبت به صفحه مشخص نیست
+            تو صفحه وابسته به آیتم دیگری نیست موقعیتشون
+            مثله اینکه موقعیتش وابسته به آیتم دیگری نیست
+            به همرا پوزیشن ابزولوت، تاپ-لفت-باتم میاد */
+            /* top: 100px;
+            left: 50px; */
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            z-index: 3;
+            /* پوزیشن که کدوم محور اکس از همه بالا باشه */
+            /* bring to front attribute */
+
+            /* اینجا به این دلیل مارجین نمیدیم چون پوزیشن ابزولوت هست
+            وابسطهبه آیتمی نیست */
+            /* پوزیشن ابزولوت مارجین معنی نداره */
+            /* top: یعنی از خود اون ویو پورت که میبینی / یا اسکرین فاصله بده
+            margin-top: هر آیتمی که بالای توعه از اون فاصله داشته باش */
+        }
+        .box2{
+            background-color: tomato;
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+        }
+        .box3{
+            background-color: brown;
+            top: 110px;
+            left: 110px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="box box1">BTN1</button>
+        <div class="box box2">div2</div>
+        <section class="box box3">sec3</section>
+    </div>
+</body>
+</html>

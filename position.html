@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 300vh;
+            background-color: tomato;
+            overflow-x: hidden;
+        }
+        .container{
+            width: 300px;
+            height: 200px;
+            /* border-width: 1px;
+            border-style: solid;
+            border-color: black; */
+            /* |این سه خط همینه */
+            border: 1px solid black;
+            position: relative;
+            /* یعنی اینکه وابسته به المنت دیگری هستی */
+        }
+        .absolute-box{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 80px;
+            right: 0px;
+            /* این داخل سکشن هست ولی با ابزولوت دادن عین خیالش نیست 
+            مستقل از المنت پرنتش حرکت میکنه*/
+        }
+        .fixed-box{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            position: fixed;
+            top: 20px;
+            right: 50px;
+        }
+        .sticky-box{
+            width: 100px;
+            height: 100px;
+            background-color: palegoldenrod;
+            position: sticky;
+            /* داخل پرتنش میمونه یا میچسبه */
+            top: 20px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="absolute-box"></div>
+        <div class="fixed-box"></div>
+        <div class="sticky-box"></div>
+        <p>Lorem ipsum dolor sit amet consectetur <span style="color: brown; text-decoration: line-through;">adipisicing elit.</span> Distinctio a repellendus alias ut dolor hic aliquam possimus. Cum optio voluptatum impedit, obcaecati excepturi tenetur consectetur. Eveniet nemo necessitatibus ducimus dolorum!</p>
+    </section>
+</body>
+</html>
