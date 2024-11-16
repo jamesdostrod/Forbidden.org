@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-header</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 300vh;
+            background-color: palegoldenrod;
+            overflow-x: hidden;
+        }
+        ul{
+            list-style: none;
+            /* to remove bullet points */
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+
+        }
+        #b-s{
+            width: 100%;
+            height: 5%;
+            margin-top: 50%;
+            background-color: #e27272;
+        }
+        #c-u{
+            width: 100%;
+            height: 5%;
+            margin-top: 40%;
+            background-color: #fa9f9f;
+        }
+        #r{
+            margin-top: 20%;
+        }
+        footer{
+            width: 100%;
+            height: 5%;
+            margin-top: 20%;
+            background-color: #e27272;
+        }
+    </style>
+</head>
+<body>
+    <!-- <nav>
+        <a href="">best sellers</a>
+        <a href="">contact us</a>
+        <a href=""></a>
+        <a href=""></a>
+    </nav> -->
+    <!-- nav or ul / you can use both of them -->
+
+    <ul>
+        <li><a href="#b-s">best sellers</a></li>
+        <!-- برای اینکه مستقیم هدایت کنیم سمت لینک درخواستی -->
+        <li><a href="#c-u">contact us</a></li>
+        <li><a href="#r">reviews</a></li>
+        <li><a href="#my-footer">address</a></li>
+        <li><a href="#item">item</a></li>
+    </ul>
+
+    <section id="b-s">
+        <h1>best sellers</h1>
+    </section>
+
+    <section id="c-u">
+        <h1>contact us</h1>
+    </section>
+
+    <img id="item" src="images/b&w-large.jpeg" alt="b&w" width="250" height="250">
+    
+    <div id="r">
+        <button>reviews</button>
+    </div>
+
+    <footer id="my-footer">
+        <address>
+            address <br>
+            gg
+        </address>
+    </footer>
+
+</body>
+</html>

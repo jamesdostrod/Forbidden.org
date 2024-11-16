@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-decoration</title>
+    <style>
+        p:first-child{
+            color: #ffe1e1;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            font-size: large;
+        }
+        p:nth-child(2){
+            color: #ff9494;
+            text-decoration: line-through;
+            /* text-wrap: ; */
+            letter-spacing: 40px;
+            /* با پیکسل میدیم  */
+            font-size: x-large;
+            font-weight: 900;
+        }
+        /* پی که اولین فرزند باشه */
+        /* پی فرزند، پرنت بادی هستن */
+        body > p{
+            color: #9f2525;
+        }
+        /* تمامی پی ها که پرنتشون بادی هست */
+        p:nth-child(3){
+            color: rgb(219, 112, 112);
+            font-size: xx-large;
+            letter-spacing: 6px;
+            font-weight: bold;
+        }
+        p:last-of-type{
+            color: #ffb547;
+            text-decoration: overline;
+            /* از تایپ خودش آخریه */
+            font-size: small;
+            font-style: italic;
+        }
+        div{
+            width: 150px;
+            border: 1px solid #000;
+        }
+        .basket-description{
+            word-wrap: normal;
+        }
+        .vlog-description{
+            word-wrap: break-word
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Sort of a half decent decade for the horror genre but</p>
+    <p>the 70s and 80s were the best. At the same time the 90s</p>
+    <p>the 70s and 80s were the best. At the same time the 90s</p>
+    <p>hrtjkvf ali-er</p>
+    <p>article</p>
+
+    <h1>word-wrap-property</h1>
+    <h2>word-wrap: normal</h2>
+    <div class="basket-description">
+        horror movies which are actually scary and not gory,It's the top horror movies to watch now,  to Get Out,and all the Aliens, Psychos, Linjlkggtrrrrrrresgtoqit4jjjjving Dead, and Its in-between!
+    </div>
+
+    <h2>word-wrap: break - word </h2>
+    <div class="vlog-description">
+        horror movies which are actually scary and not gory,It's the top horror movies to watch now,  to Get Out,and all the Alioyktegrrrepro[wkrtkg'f;ldfiojgreklfvm,iens, Psychos, Living Dead, and Its in-between!
+    </div>
+</body>
+</html>
