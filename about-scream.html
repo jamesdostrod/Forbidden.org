@@ -18,7 +18,7 @@
             margin-top: 45px;
             margin-left: 45px;
             margin-bottom: 45px;
-            border-radius: 25px;
+            border-radius: 20px;
         }
         .submit2nd{
             border-width: 5px;
@@ -29,6 +29,12 @@
             height: 100px;
             /* دایره اش کردیم اینجا */
             border-radius: 100px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
         }
     </style>
     <!-- استایل دهی سه نوع داریم؛
@@ -74,6 +80,8 @@
             <colgroup>
                 <col span="1" style="background-color: rgb(192, 0, 0);"/>
                 <col span="2" style="background-color: rgb(255, 0, 0);"/>
+                <col span="3" style="background-color: antiquewhite;">
+                <col span="4" style="background-color: rgb(247, 135, 135);">
             </colgroup>
             <!-- عنوان ستون -->
             <thead>
@@ -84,6 +92,7 @@
                     <th colspan="2">x</th>
                     <th>xxx</th>
                     <th>xx</th>
+                    <th>new</th>
                 </tr>
             </thead>
             <tbody>
@@ -93,11 +102,13 @@
                     <td>Psychological</td>
                     <td>Slasher</td>
                     <td rowspan="2">Paranormal fiction</td>
+                    <td>new</td>
                 </tr>
                 <tr>
                     <td>stream it!</td>
                     <td>stream it!</td>
                     <td>stream it!</td>
+                    <td>new</td>
                 </tr>
             </tbody>
             <!-- برای نوشتن جمع کل جدول ها -->
@@ -106,6 +117,7 @@
                     <td>sum</td>
                     <td>who aren't living</td>
                     <td>who aren't living</td>
+                    <td>new</td>
                 </tr>
             </tfoot>
         </table>

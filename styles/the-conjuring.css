@@ -3,6 +3,7 @@ body{
     height: 100vh;
     background-color: rgb(210, 210, 255);
     /* view width - view height*/   
+    overflow-x: hidden;
 }
 
 /* div{
@@ -11,7 +12,8 @@ body{
 
 .div1{
     padding: 15px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: rgb(72, 72, 138);
 }
 
@@ -22,14 +24,14 @@ body{
     /* گپ فاصله بین ستون به ستون یا ردیف به ردیف */
     margin-top: 25px;
     background-color: rgb(43, 0, 255);
-    padding-right: 15px;
+    padding-right: 10px;
     font-size: 30px;
 }
 
 .div2{
     padding: 15px;
     display: flex;
-    direction: rtl;
+    direction: ltr;
     flex-direction: column;
     gap: 3px;
     background-color: aqua;
@@ -48,10 +50,10 @@ a:link{
     /* برای حذف  underline */
 }
 a:visited{
-    color: #7b7b7b;
+    color: #422ae0;
 }
 a:hover{
-    color: red;
+    color: rgb(81, 255, 0);
 }
 a:active{
     color: blueviolet;

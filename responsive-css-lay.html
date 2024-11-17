@@ -9,7 +9,7 @@
             width: 100vw;
             height: 200vh;
             background-color: rgb(192, 192, 254);
-            direction: ltr;
+            direction: rtl;
             overflow-x: hidden;
         }
         ul{
@@ -18,10 +18,41 @@
             flex-direction: row;
             gap: 50px;
         }
+        header{
+            display: flex;
+            flex-direction: row;
+            width: 93vw;
+            padding-inline: 30px;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2%;
+        }
+        #logo{
+            display: flex;
+        }
+        #burger{
+            display: none;
+        }
+        /* media query css
+        responsive web design media queries
+        برای ریسپانسیو شدن وبسایت استفاده میشه */
+        @media (max-width:600px){
+            #logo{
+                display: none;
+            }
+            ul{
+                display: none;
+            }
+            #burger{
+                display: flex;
+            }
+        }
+        /* حداکثر ششصد پیکسل باشه استایل داخل رو اجرا کن */
     </style>
 </head>
 <body>
     <header>
+        <img id="burger" src="svg/svg/burger-menu-left.svg" alt="burger-menu-left" width="30px" height="30px">
         <ul>
             <li><a href="">link 1</a></li>
             <li><a href="">link 2</a></li>
@@ -32,7 +63,7 @@
             <li><a href="">link 7</a></li>
             <li><a href="">link 8</a></li>
         </ul>
-        <img src="svg/svg/coffee.svg" alt="coffee logo" width="50" height="50">
+        <img id="logo" src="svg/svg/coffee.svg" alt="coffee logo" width="50" height="50">
     </header>
 </body>
 </html>
