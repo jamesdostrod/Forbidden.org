@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inconsolata:wght@200..900&family=Sour+Gummy:ital,wdth,wght@0,118.8,100..900;1,118.8,100..900&display=swap" rel="stylesheet">
+    <title>forms</title>
+    <!-- field form: جاهایی که ثبتنام انجام میشه -->
+    
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: palevioletred;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            font-family: "Sour Gummy",sans-serif;
+        }
+        input{
+            padding-block: 7px;
+            direction: ltr;
+        }
+        form{
+            direction: ltr;
+            color: rgb(255, 194, 247);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+<!-- <form action=""></form> -->
+<!-- از اتریبیوت اکشن استفاده نمیکنیم چون باگ سکیوریتی دارد -->
+<!-- اکشن برای ارسال کل فیلد ها به سمت سرور استفاده میشه -->
+<body>
+    <form onsubmit="">
+        <label for="fname">name:</label>
+        <input type="text" id="fname" name="fname" placeholder="your name here" required>
+        <!-- placeholder: برای نوشتن نامی که در واقع نوشته نشده داخل باکس -->
+
+        <label for="pass">password:</label>
+        <input type="password" id="pass" name="pass" required>
+        <!-- برای مشخص کردن پسورد امن و تعداد کاراکتر مجاز از regexp -->
+        <!-- که برای جاوا اسکریپت نه اینجا -->
+
+        <input type="radio" id="radio">
+
+        <label for="email">email:</label>
+        <input type="email" placeholder="mail here" readonly required>
+        <!-- readonly: نمیتونیم چیزی تغییر بدیم -->
+        <!-- برای اینکه کاربر اطلاعات قبلا ثبت شده رو نتونه تغییر بده و دیسیبل کنیم -->
+
+        <label for="number">series number:</label>
+        <input type="number" min="5" max="20" step="5" placeholder="type on number">
+        <!-- پنج تا پنج تا اضافه کن -->
+
+        <input type="submit" value="submit">
+    </form>
+
+    <form>
+        <input list="browser">
+        <datalist id="browser">
+            <option value="safari">
+            <option value="chrome">
+            <option value="firefax">
+            <option value="duckduckgo">
+            <option value="opera">
+        </datalist>
+    </form>
+</body>
+</html>
