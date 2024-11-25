@@ -10,7 +10,7 @@
     <style>
         body{
             width: 100vw;
-            height: 100vh;
+            height: 200vh;
             display: flex;
             flex-direction: column;
             gap: 5px;
@@ -21,7 +21,7 @@
             font-family: "Sour Gummy",sans-serif;
         }
         input{
-            padding-block: 7px;
+            padding-block: 5px;
             direction: ltr;
         }
         form{
@@ -70,6 +70,54 @@
             <option value="duckduckgo">
             <option value="opera">
         </datalist>
+    </form>
+
+    <form action="">
+        <input type="radio" id="html" name="lang" value="HTML">
+        <label for="html">HTML</label>
+        <input type="radio" name="lang" id="css" value="CSS">
+        <!-- ولیو ها از طرف کد جاوا اسکریپت گرفته میشه و ارسال میشه سمت ای پی آی -->
+        <label for="css">CSS</label>
+        <input type="radio" id="javascript" name="lang" value="javascript">
+        <label for="javascript">javascript</label>
+        <!-- با اسم/نیم دادن همرو بهم کانکت کردیم  -->
+    </form>
+
+    <form action="/submit-form.php" method="post">
+        <!-- post: Corresponds to the HTTP POST method ; form data are included in the body of the form and sent to the server. -->
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1">
+        <label for="vehicle1">vehicle1</label>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="vehicle2">
+        <label for="vehicle2">vehicle2</label>
+        <input type="submit">
+    </form>
+
+    <form onsubmit="call">
+        <!-- تمام اطلاعاتی که داخل تگ فرم قرار میگیره همه از طریق دکمه ثبت ارسال میشه داخل متود آنسابمیت -->
+        <label for="file">upload file</label>
+        <input type="file" id="file" name="file">
+
+        <label for="range">range</label>
+        <input type="range" id="range" name="range" min="0" max="50">
+        <!-- از جاوا اسکریپت به ولیو این دسترسی داریم -->
+
+        <!-- <label for="phone">phone</label> -->
+        <input type="tel" id="phone" name="phone" placeholder="your number do?" autofocus>
+        <!-- با اتو فوکوس یه راست میره سمت اینپوت تلفن -->
+
+        <label for="search">search</label>
+        <input type="search" name="search" id="search">
+
+        <input type="email" id="email" value="info@setab.ir" disabled placeholder="info@setab.ir">
+        <!-- disabled: برای اینکه نتونه اطلاعات رو کاربر تغییر بدع -->
+
+        <label for="url">web</label>
+        <input type="url" name="url" id="url">
+
+        <input type="submit" value="ثبت">
+
+        <input type="reset" value="انصراف">
+        <!-- ریست داخل تگ فرم باشه کار میکنه -->
     </form>
 </body>
 </html>

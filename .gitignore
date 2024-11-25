@@ -17,13 +17,16 @@ secure-pass.txt
 
 # هر پروژه مختص به یک ریپازیتوری هست
 
+# برای پول پروژه:
+# git pull
+
 # فرضا یک پروژه را تا نصفه و حجم بالایی نوشتیم و بعد تصمیم گرفتیم بزنیم رو
 # گیتاب
 # حالا اومدیدم با کامند های اولیه بزنیم گیر میکنه
 # راه حل:
 # با این کامند حجم بافر رو بیشتر میکنیم
 # git config http.postBuffer 524288000
-
+# عدد سایز بافر است که هر دفعه یه چیزی میدیم
 # Increase the POST buffer size in Git
 
 # The value is specified in bytes, so in the above case the buffer size has been set to 50MB. The default is 1MB.

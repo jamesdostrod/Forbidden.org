@@ -49,22 +49,64 @@
                 top: 0px;
             }
         }
-        div{
+        .div-anime{
             width: 100px;
             height: 100px;
             background-color: blue;
             animation-name: anim2;
-            animation-duration: 5s;
-            animation-delay: 2s;
+            animation-duration: 2s;
+
+            /* تاخیر در قبل از اجراانیمیشن */
+            animation-delay: 1s;
+
+            /* تعداد اجرا */
+            animation-iteration-count: infinite;
+            /* animation-iteration-count: 3; */
+            /* چندبار انیمیشن را تکرار کنم */
+            
+            /* جهت اجرای انیمیشن */
+            /* animation-direction: normal; */
+            /* animation-direction: reverse; */
+            /* به صورت برعکس از آخر به اول */
+            /* animation-direction: alternate; */
+            /* از اول به آخر-از آخر به اول */
+            animation-direction: alternate-reverse;
+        }
+        .first-div{
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            font-weight: bold;
+            position: relative;
+            /* Relative positioning changes the position of the HTML element relative to where it normally appears. 
+            So "left:20" adds 20 pixels to the element's LEFT position.
+            You can use two values top and left along with the position property to move an HTML element anywhere in the HTML document. */
+            animation-name: mymove;
+            animation-duration: 1s;
+            /* animation-name & animation-duration are required مکمل هم هستن  */
+            animation-iteration-count: infinite;
+        }
+        /* برای تعریف انیمیشن است  */
+        @keyframes mymove{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 500px;
+            }
+        }
+        #div2{
+            /* سرعت انیمیشن را مشخص میکنه */
+            animation-timing-function: linear;
         }
     </style>
 </head>
 <body>
-    <div></div>
-    <!-- <div id="div1" class="first-div">linear</div>
+    <div class="div-anime"></div>
+    <div id="div1" class="first-div">linear</div>
     <div id="div2" class="second-div">ease</div>
-    <div id="div3" class="second-div">ease-in</div>
-    <div id="div4" class="second-div">ease-out</div>
-    <div id="div5" class="second-div">ease-in-out</div> -->
+    <div id="div3" class="third-div">ease-in</div>
+    <div id="div4" class="fourth-div">ease-out</div>
+    <div id="div5" class="fifth-div">ease-in-out</div>
 </body>
 </html>
