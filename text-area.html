@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+    <script>
+        // اول از همه تابع را تعریف میکنیم
+        const alertMyComment=()=>{
+            const txt=document.getElementById("mytxtarea").value;
+            // value: چون داخل فرم هست 
+            alert(txt)
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="alertMyComment()">
+        <label>the text area</label><br>
+        <textarea style="resize: none;" name="mytxtarea" id="mytxtarea" rows="10" cols="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore reiciendis voluptatibus saepe adipisci neque tempora atque reprehenderit deserunt quia aliquid architecto praesentium ex velit, unde quis impedit exercitationem porro molestiae?</textarea>
+        <br>
+        <input type="submit" value="submit">
+    <!-- تعداد ستون و ردیف هم اینجا مشخص میکنیم -->
+    <!-- با ریسایز نان دیگه نمیتونم ریسایز کنم -->
+    </form>
+</body>
+</html>

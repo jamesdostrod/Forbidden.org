@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>root html body</title>
+    <style>
+        :root{
+            /* طریقه نوشتن استاندارد رنگ دهی */
+            /* از این رو موقع تغییر رنگ نیاز نیست یکی یکی عوض کنیم / از همینجا همه رو سریع تغییر میدیم */
+            --bg-maincolor: rgba(255,0,0,0.3);
+            --bg-bodycolor: rgba(220,0,0,0.1);
+            --border-color: rgb(255, 230, 0);
+            /* --font-family: */
+        }
+        body{
+            background-color: var(--bg-bodycolor);
+            /* با تعریف کردن رنگ در بالا نیازی نیست مجددا رنگ انتخاب کنیم و با وَر رنگ را از بالا صدا میکنیم */
+        }
+        /* body,html{
+            بعضی وقتا برای استایل دهی دوتایی مینوسن
+            اچ تی ام ال برای کل
+            ولی بادی محتویات داخل
+            فقط برای استایل دهی کنیم کافیه
+        } */
+        html{
+            background-color: var(--bg-maincolor);
+        }
+        button{
+            background-color: var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <button>submit</button>
+    <p>0+0</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform, translate, scale & imp</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 1.5s ease ;
+        }
+        .box:hover{
+            cursor: pointer;
+
+            /* تغییر مکان */
+            transform: translate(50px,50px);
+            /* transform: translateX(200px); */
+
+            /* برای درصد زوم */
+            scale: 3;
+
+            background-color: palegreen !important;
+            /* over write style */
+            /* وقتی ببینی استایلی اجرا نمیشه از راه حل بالا استفاده کن */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

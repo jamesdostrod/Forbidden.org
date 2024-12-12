@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input range</title>
+    <script>
+        const showValue=()=>{
+            const v=document.getElementById("myrange").value;
+            document.getElementById("myRangeValue").innerText=v+"%";
+            // با + بهش درصد را چسبوندیم که با درصد نشون بده
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="range" id="myrange" min="0" max="10" onchange="showValue()">
+        <!-- onchange="hhhh()" -> to call function -->
+        <label id="myRangeValue"></label>
+    </form>
+</body>
+</html>
