@@ -36,11 +36,104 @@
     <script>
         var c= document.getElementById("canvasLine");
         var ctx= c.getContext("2d");
+        
         ctx.moveTo(0,0);
         ctx.lineTo(200,50);
+
         ctx.stroke();
         // var-const-let= برای تغیر متغیر هست (ظرفی ایجاد میکنیم که داخلش یه چیزهایی میریزیم)
     </script>
     
+    <canvas id="kitty-circle" width="200" height="100" style="border: 2px solid red;"></canvas>
+    <script>
+        var c=document.getElementById("kitty-circle");
+        var ctx=c.getContext("2d");
+        // صفحه را دو بعدی گرفتم
+        // ctx= یک متغیر است که اینجا تعریف کردیم
+
+        ctx.beginPath();
+        // برای رسم کمان از این شروع میکنیم
+        ctx.arc(150,55,30,0,2*Math.PI)
+
+        // اینجا صفر دادیم یعنی از صفر رادیان شروع کرده / که یک هم میتونم بدم
+        // Math.PI= یعنی صدوهشتاد درجه / بیشتر از صدوهشتاد ضربدر دو میکنیم
+        // آیتم های داخل آرک
+        // arc(x,y,radius,startAngle,endAngle)
+        // x , y= مرکز دایره فرضی برای آرک
+        // radius= شعاع به پیکسل / بزرگی دایره
+        // startAngle= زاویه شروع رادیان / دایره از سمت راست مرکز بر روی محور ایکس
+        // که واحدش رادیان است / کمی بزرگتر از چهل و پننچ درجه
+        // endAngle= زاویه پایانی قوس به رادیان
+        ctx.stroke();
+        // با متد استروک کشیدیم تا کمان بالا دبده بشه
+        // یعنی بکش
+        // استروک برای همه ست
+    </script>
+
+    <canvas id="pikachu-text" width="200" height="100" style="border: 5px dotted palevioletred;"></canvas>
+    <script>
+        var c=document.getElementById("pikachu-text");
+        var ctx=c.getContext("2d");
+        
+        ctx.font="30px Arial";
+        ctx.fillStyle="red;";
+        ctx.strokeStyle="red";
+        ctx.strokeText("Bonjour",10,80)
+        // برای نوشتن متن داخل کانوس استفاده میشه
+        // ctx.strokeText("Bonjour",x,y)
+        // صفر و صفر بالا نقطه شروع
+
+
+        // دیپ نوت: با خط پایین اومدن نشون دادم برای هر اسکریپت چی لازمه و کدوم همه است
+    </script>
+
+    <hr>
+
+    <div style="height: 100%; width: 50%; display: flex; flex-direction: column; background-color: palegoldenrod;">
+        <h1>Linear Gradient</h1>
+        <canvas id="sonic-gradient" width="200" height="100" style="border: 5px solid plum; background-color: white;"></canvas>
+        <script>
+            var c=document.getElementById("sonic-gradient");
+            var ctx= c.getContext("2d");
+            var grd= ctx.createLinearGradient(0,100,200,100);
+            // var grd= ctx.createLinearGradient(x0,y0,x1,y1);
+            grd.addColorStop(0,"pink");
+            // صفر برای دوتای اول
+            grd.addColorStop(1,"purple");
+            // یک برای دوتای آخر
+            ctx.fillStyle=grd;
+            // اینو ندی گردینت اعمال نمیشه
+            ctx.fillRect(10,10,100,80);
+            // ده تا از بالا و ده تا از پایین فاصله داره
+            // عرض صدتا باشه
+            // ارتفاع 8 تا
+            // ctx.fillRect(x,y,width,height);
+            // یا این یک مستطیل داخل رسم کردیم
+            // grd= اسم گردینت
+        </script>
+    </div>
+
+    <hr>
+
+    <div style="width: 50%; height: 100%; display: flex; flex-direction: column; background-color: rgba(47, 20, 217, 0.6);">
+        <h1>Circular Gradient</h1>
+        <canvas id="ferb-circular" width="200" height="100" style="border: 10px dashed black;"></canvas>
+        <script>
+            var c=document.getElementById("ferb-circular");
+            var ctx=c.getContext("2d");
+            var grd= ctx.createRadialGradient(70,70,20,70,60,100);
+            // var grd= ctx.createRadialGradient(x0,y0,r0,x1,y1,r1)
+            // x0 , y0 = مختصات مرکز دایره اول
+            // r0 = شعاع دایره اول
+            // x1 , y1 = مختصات دایره دوم
+            // r1 =  شعاع دایره دوم
+            grd.addColorStop(0,"red");
+            // صفر برای سه تای اول
+            grd.addColorStop(1,"yellow");
+            // یک برای سه تای دوم
+            ctx.fillStyle=grd;
+            ctx.fillRect(0,0,200,100);
+        </script>
+    </div>
 </body>
 </html>
