@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&display=swap" rel="stylesheet">
+    <title>selectores</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: palevioletred;
+            overflow-x: hidden;
+        }
+        /* #header{
+            height: 200px;
+            width: 200px;
+            display: flex;
+            background-color: paleturquoise;
+        } */
+        /* .heading{
+            color: rgb(171, 20, 70);
+        } */
+        /* p.wb{
+            یعنی پی هایی که اسم کلاسشون دبلیو بی هست
+            color: pink;
+            font-size: x-large;
+        } */
+        /* h1,p{
+            اینجا هم برای اچ یک و پی باهم استایل دادیم
+            font-weight: normal;
+            text-decoration: underline;
+        } */
+        *{
+            /* برای کل المنت ها
+            font-size: xx-large !important;
+            ایمپورتنت یعنی من را سر بگیر و نذار هیچ استایلی بالای من بیاد */
+            font-family: "agu display",sans-serif;
+        }
+
+        /* div p{
+            color: aqua;
+            font-size: medium;
+        } */ 
+        /* div>p{
+            پی هایی که اولین پرنتشون دیو هست / یعنی زیر مچموعه آنها
+            color: aquamarine;
+        }
+        div +p{
+            اولین پی بعد از تمام شدن دیو
+            color: blue;
+        } */
+        p ~ul{
+            color: azure;
+        }
+        p:hover{
+            background-color: blue;
+            cursor: pointer;
+        }
+        li:first-child{
+            color: darkorange;
+        }
+        p:first-child i{
+            color: blue;
+        }
+        q:lang(no){
+            color: darkblue;
+        }
+
+        input:checked{
+            height: 100px;
+            width: 100px;
+        }
+        input[type=tel]:disabled{
+            border: 3px dotted blue;
+        }
+        input[type=text]:disabled{
+            border: 10px solid rgb(16, 139, 139);
+        }
+        input[type=text]:enabled{
+            background-color: gold;
+        }
+
+        p:empty{
+            color: gold;
+            font-size: xx-large;
+        }
+        p:first-of-type{
+            color: gold;
+        }
+
+        input:focus{
+            background-color: rgb(88, 88, 88) !important;
+        }
+    </style>
+</head>
+<body>
+    <p>body's first-child</p>
+    <h1>product categories</h1>
+    <p>body's third child</p>
+
+    <section>
+        <h3>curse someone</h3>
+        <p>coi-ic</p>
+        <button>sign in</button>
+    </section>
+
+    <p><i>h1 as an example</i></p>
+    <section id="header"></section>
+    <h1 class="heading">Bonjour</h1>
+    <h2 class="wb">warner bros</h2>
+    <p class="wb">Lorem ipsum deleniti ipsam esse, corporis delectus repudiandae molestias. Voluptas placeat, optio commodi at expedita id.</p>
+    <p>red flag</p>
+    <p class="wb">doctor animo</p>
+
+    <div>
+        <p>ooooooop</p>
+        <div>
+            <p>illicit abortion</p>
+            <p>obligation</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+            <h2>title</h2>
+            <ul>
+                <li>item alpha</li>
+                <li>item beta</li>
+            </ul>
+        </div>
+        <p>funko</p>
+        <p>forbidden textual area<q lang="no">je mappelle Julie</q>shhh</p>
+    </div>
+
+    <form>
+        <input type="checkbox" name="" value="remember" checked="checked">
+        <!-- checked: یعنی حالت چک داشته باشه به صورت دیفالت -->
+        remember me <br>
+        <input type="checkbox" name="" value="man">
+        gender <br>
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="last name">
+        <input type="text" placeholder="phone:=" disabled>
+        <input type="tel" placeholder="phone:=" disabled>
+    </form>
+
+    <p>Lorem, ipsum dolor <b>rtx by juvana</b> sit amet consectetur adipisicing elit. Fuga quam quas velit doloribus hic culpa</p>
+    <p>voluptatum</p>
+</body>
+</html>
