@@ -94,17 +94,92 @@
         input:focus{
             background-color: rgb(88, 88, 88) !important;
         }
+        input:in-range{
+            border: 3px solid rgb(232, 232, 9);
+        }
+        input:invalid{
+            color: red;
+        }input:valid{
+            color: rgb(23, 239, 23);
+        }
+        input:optional{
+            border: 5px dotted violet;
+        }input:out-of-range{
+            border: 15px solid red;
+            /* اگر اعداد بین رنجی باشد که ما تعریف نکردیم */
+        }
+        input:read-only{
+            color: rgb(194, 204, 235)
+        }
+        input:read-write{
+            background-color: rgb(255, 0, 162) !important;
+        }
+        input:required{
+            color: rgb(0, 255, 234);
+        }
+        p:last-child{
+            background-color: blue;
+        }
+        h2:last-of-type{
+            background-color: greenyellow;
+        }
+        :not(p){
+            color: white;
+            font-size: small;
+            /* یه چیزی را خارج کنیم ار محدوده المنت ها */
+        }
+        p, p * {
+            color: initial;
+            font-size: initial;
+            /* پی ها و همه پرنت های پی */
+            /* استایل ها باید اینیشیال یاشند و به ارث نگیرن  تا اینکه استایل بالای نات پی اعمال بشه */
+        }
+        p:empty{
+            /* یعنی اینکه هیچ چایلدی نداشته باشه */
+            /* برای زمانی که تا وقتی خالیه یه استایلی بگیره بعد از اینکه داخلش پزنتی قرار گرفت از پی امپتی خارج میشه */
+            /* قبل اینکه داده بیاد یه استایل خاصی بگیره */
+            background-color: lightblue;
+            border: 1px solid blue;
+            height: 20px;
+            width: 200px;
+        }
+        h2:nth-child(2){
+            color: lemonchiffon;
+            background-color: rgb(242, 190, 87);
+        }
+        h2:nth-last-child(2){
+            background-color: rgb(26, 151, 151);
+        }
+        p:nth-last-of-type(2){
+            background-color: red;
+        }
+        p:nth-of-type(4){
+            background-color: rgb(255, 0, 162);
+        }
+        h3:only-of-type{
+            background-color: lightgrey;
+        }
     </style>
 </head>
 <body>
     <p>body's first-child</p>
+    <h2>t-rex</h2>
+    <p> </p>
     <h1>product categories</h1>
     <p>body's third child</p>
 
     <section>
         <h3>curse someone</h3>
+        <h2>mon ami / second header</h2>
         <p>coi-ic</p>
+        <p></p>
         <button>sign in</button>
+        <h2>mon amie</h2>
+        <button>sign in</button>
+        <h2>mon amie francaise</h2>
+        <p><span></span></p>
+        <h2>brand new h2</h2>
+        <p>full of empty</p>
     </section>
 
     <p><i>h1 as an example</i></p>
@@ -144,6 +219,15 @@
         <input type="text" placeholder="last name">
         <input type="text" placeholder="phone:=" disabled>
         <input type="tel" placeholder="phone:=" disabled>
+        <br><br>
+        <input type="number" min="5" max="100" value="7">
+        <!-- value="7": یعنی موقع باز شدن هفت رو بیاره -->
+        <br><br>
+        <input type="email" value="support">
+        <br><br>
+        <input type="text" placeholder="as it was by Styles" required>
+        <br><br>
+        <input type="email" value="ali@gmail.com" readonly>
     </form>
 
     <p>Lorem, ipsum dolor <b>rtx by juvana</b> sit amet consectetur adipisicing elit. Fuga quam quas velit doloribus hic culpa</p>

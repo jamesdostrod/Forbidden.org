@@ -44,7 +44,35 @@
 - input:checked{} - یعنی موقعی که چک یا تیک زدیم استایل هایی که دادیم را اعمال کنه
 - input:disabled - اتریبیوت دیس ایبل داره
 - input:enabled - اتریبیوت انیبل داره / دیس ایبل نداره
-- :empty - p:empty{} **********
+- :empty - p:empty{} - <p></p> ok but <p></p> wrong - <p><span></span></p> wrong
 - :first-of-type - p:first-of-type  - اون پی را انتخاب میکنه که اولین پی از فرزندان باشه
 مهم نیست قبل از پی چه المنت هایی وجود داشته باشه مهم اینه که از بالا به پایین اولین پی که میبینه را انتخاب کنه
 - :focus - input:focus - بعد کلیک در داخل اینپوت استایل ظاهر میشه
+- :in-range - input:in-range
+- :invalid - input:invalid - برای زمانی که اگر با فرمت تعیین نکرده ما اینپوت را پر کنی ارور بده
+این اتفاق فقط به خاطر تایپ می افته / مثلا ایمیل باشه فقط تایپ ایمیل مورد قبوله
+- :valid - input:valid
+- :optional - input:optional - اون اینپوتی که ریکوآیرد نداره - non required
+- :out-of-range - input:out-of-range 
+- :read-only - input:read-only - read only attr / attribute
+- :read-write - input:read-write - without read only & disabled attr
+- :required - input:required - inputs have got required attr
+- :last-child - p:last-child - پی که آخرین فرزند پرنتش باشه
+- :last-of-type - h1:last-of-type - آخرین نوع از المنت اچ یک / آخرین اچ یک اون پرنت
+- :not(element) - :not(p) - یعنی اونی را سلکت کن که پی نباشه
+به علت اینکه استایل این سلکتور به صورت آبشاری  به المنت های دبگه تاثیر میزاره
+این سلکتور به تنهایی اعمال نمیشه و در واقع استایل داخل همه المنت ها به ارث میبره
+p, p * {
+            color: initial;
+            font-size: initial;
+            /* پی ها و همه پرنت های پی */
+        }
+        که با این میاد
+        initial: یعنی به ارث نبرد
+- :nth-child(n) - h2:nth-child(2) - یا شماره فرزند استایل تعریف میکنیم
+- :nth-last-child(n) - p:nth-last-child(2) - از آخر دومین پی را انتخاب میکند
+- :nth-last-of-type(n) - p:nth-last-of-type(2) -پی که از آخر دومین پی باشه ، مهم نیست دومین فرزند باشه یا نه مهم پی بودنشه 
+- :nth-of-type(n) - p:nth-of-type(2) - از بالا میشماره - پی که دومین پی از بالا باشه ، دومین پی نه دومین فرزند
+تایپ رو که دیدیم یعنی نوع که مثلا دومین پی نه دومین فرزند
+- :only-of-type - p:only-of-type - تنها پی از پرنتش و در داخل پرنتش بیشتر از پی وجود ندارد
+- :only-child - p:only-child - تنها فرزند برای پرنتش - به غیر از اون فرزند دیگری وجود ندارد
