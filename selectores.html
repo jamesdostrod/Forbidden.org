@@ -159,9 +159,82 @@
         h3:only-of-type{
             background-color: lightgrey;
         }
+        h4:last-child{
+            background-color: rgb(100, 100, 173);
+        }
+        #news1:target{
+            border: 2px solid black;
+            background-color: paleturquoise;
+            color: blue;
+            height: 200px;
+        }
+        #news2:target{
+            color: blue;
+        }
+
+        section{
+            background-color: rgb(255, 100, 126);
+        }
+        section::after{
+            content: "hi section";
+            /* این تو کد نیست و با استفاده از افتر اومده */
+        }
+        p::first-letter{
+            color: rgb(37, 224, 238);
+            font-weight: semi bold;
+        }
+        p::first-line{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        ::marker{
+            color: blue;
+        }
+        p::selection{
+            background-color: greenyellow;
+        }
+        a[target]{
+            background-color: rgb(167, 167, 253);
+            color: white;
+        }
+        a[target=_parent]{
+            font-weight: lighter;
+            background-color: pink;
+        }
+        [title~="flower"]{
+            border: 3px solid black;
+        }
+        h1[class |= "describe"]{
+            background-color: yellow !important;
+        }
     </style>
 </head>
 <body>
+    <section>
+        <h1 class="describe-header">un</h1>
+        <h1 class="describe">deux</h1>
+        <p class="describe-tex">trois</p>
+        <p class="describecontent">quatre</p>
+    </section>
+    <br><br>
+
+    <img src="images/FearStreetLogo.png" alt="logo" title="scream flower" height="50px" width="50px">
+    <img src="images/FearStreetLogo.png" alt="logo" title="flower" height="50px" width="50px">
+    <img src="images/FearStreetLogo.png" alt="logo" title="scream" height="50px" width="50px">
+
+    <ol type="A">
+        <li>celcius</li>
+        <li>prime</li>
+        <li>dr pepper</li>
+    </ol>
+    <p><a href="#news1" target="_blank">follow through link/first</a></p>
+    <p><a href="#news2" target="_parent">follow through link/second</a></p>
+    <!-- اینجا چون مثله یک آیدی و استایل ندادیم، رنگ یا بردر نمیگیره -->
+
+    <p id="news1">1st content</p>
+    <p id="news2">2nd content</p>
+
+    <hr><br>
     <p>body's first-child</p>
     <h2>t-rex</h2>
     <p> </p>
@@ -207,6 +280,13 @@
         </div>
         <p>funko</p>
         <p>forbidden textual area<q lang="no">je mappelle Julie</q>shhh</p>
+    </div>
+
+    <section>
+        <h4>last child test</h4>
+    </section>
+    <div>
+        <h4>last child test 2</h4>
     </div>
 
     <form>
