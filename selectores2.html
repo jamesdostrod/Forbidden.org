@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1[class^="top"]{
+            background-color: yellow;
+            text-decoration: underline;
+        }
+        /* چون همه کلس ها با تاپ شروع شدن به همه اعمال میکنه */
+        h1[class^="top"]{
+            background-color: yellow;
+            text-decoration: underline;
+        }
+        /* المنت اچ یک اضافه کنیم به پی ها اعمال نمیشه */
+
+        [class$="test"]{
+            background-color: rgb(157, 182, 255);
+        }
+
+        [class*="te"]{
+            background-color: bisque;
+        }
+        /* که شامل تی ای باشه */
+        
+    </style>
+</head>
+<body>
+    <h1 class="top-header">welcome</h1>
+    <h1 class="top-text">hell</h1>
+    <h1 class="topcontent">oooo</h1>
+
+    <br>
+
+    <p class="top-header">welcome</p>
+    <p class="top-text">hell</p>
+    <h1 class="topcontent">oooo</h1>
+
+    <br>
+
+    <p class="top-header-test">welcome</p>
+    <p class="top-text">hell</p>
+    <!-- سلکتور چون این با تست تموم نشده اعمال نمیکنه -->
+    <h1 class="mytest">oooo</h1>
+</body>
+</html>

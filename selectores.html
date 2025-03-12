@@ -11,7 +11,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            background-color: palevioletred;
+            background-color: rgb(245, 156, 186);
             overflow-x: hidden;
         }
         /* #header{
@@ -54,6 +54,7 @@
         } */
         p ~ul{
             color: azure;
+            /* general sibling selector */
         }
         p:hover{
             background-color: blue;
@@ -94,6 +95,7 @@
         input:focus{
             background-color: rgb(88, 88, 88) !important;
         }
+        /* این کد زمانی که کاربر روی یک فیلد ورودی فوکوس می‌کند، رنگ پس‌زمینه آن را تغییر می‌دهد */
         input:in-range{
             border: 3px solid rgb(232, 232, 9);
         }
@@ -123,6 +125,7 @@
         h2:last-of-type{
             background-color: greenyellow;
         }
+        /* آخرین عنصر از نوع خود در والد اچ دو */
         :not(p){
             color: white;
             font-size: small;
@@ -131,6 +134,7 @@
         p, p * {
             color: initial;
             font-size: initial;
+            /* به حالت پیش فرض مرورگر بازگشتن */
             /* پی ها و همه پرنت های پی */
             /* استایل ها باید اینیشیال یاشند و به ارث نگیرن  تا اینکه استایل بالای نات پی اعمال بشه */
         }
@@ -197,6 +201,7 @@
             background-color: rgb(167, 167, 253);
             color: white;
         }
+        /* به طور خاص، a[target] انتخابگری است که تمام تگ‌های لینک (<a>) را که دارای ویژگی target هستند، انتخاب می‌کند */
         a[target=_parent]{
             font-weight: lighter;
             background-color: pink;

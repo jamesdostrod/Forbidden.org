@@ -78,6 +78,7 @@
             background-color: rgb(248, 58, 172);
             font-weight: bold;
             position: relative;
+            /* پوزیشن ریلییتیو باعث حرکت شد */
             /* Relative positioning changes the position of the HTML element relative to where it normally appears. 
             So "left:20" adds 20 pixels to the element's LEFT position.
             You can use two values top and left along with the position property to move an HTML element anywhere in the HTML document. */
@@ -110,13 +111,14 @@
         /* آهسته شروع  */
 
         p{
+            position: relative;
             animation-name: anim3;
-            animation-duration: 5s;
+            animation-duration: 2s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             /* همه کد های بالا در یک خط */
-            animation: anim3 5s linear infinite alternate;
+            /* animation: anim3 5s linear infinite alternate; */
         }
     </style>
 </head>
